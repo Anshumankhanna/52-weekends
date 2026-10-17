@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import './Navbar.css'
 
-export default function Navbar() {
+export default function Navbar({ currentPage, onNavigate }) {
   const [isOpen, setIsOpen] = useState(false)
 
   const toggleMenu = () => setIsOpen((prev) => !prev)
@@ -20,7 +20,9 @@ export default function Navbar() {
           tabIndex={0}
           aria-label="Navigation Menu"
         >
-          <span className="navbar__title">52 Weekends</span>
+          <span className="navbar__title">
+            {currentPage === 'visa' ? '52 Weekends • Visa' : '52 Weekends'}
+          </span>
           <div className="navbar__menu-icon">
             <span className="navbar__menu-line"></span>
             <span className="navbar__menu-line"></span>
@@ -55,45 +57,71 @@ export default function Navbar() {
                 </button>
               </div>
               <nav className="navbar__links">
-                <a
-                  href="#hero"
+                <button
                   className="navbar__link-item"
-                  onClick={() => setIsOpen(false)}
+                  style={{ textAlign: 'left', background: 'none', border: 'none', width: '100%' }}
+                  onClick={() => {
+                    onNavigate('home')
+                    setIsOpen(false)
+                  }}
                 >
-                  Home
-                </a>
+                  🏡 Home (Getaways)
+                </button>
+                <button
+                  className="navbar__link-item"
+                  style={{
+                    textAlign: 'left',
+                    background: currentPage === 'visa' ? 'var(--cream)' : 'none',
+                    border: 'none',
+                    width: '100%',
+                    color: '#e89f22',
+                    fontWeight: 700,
+                  }}
+                  onClick={() => {
+                    onNavigate('visa')
+                    setIsOpen(false)
+                  }}
+                >
+                  🛂 Visa At Your Doorstep
+                </button>
+                <hr style={{ border: 'none', borderTop: '1px solid #f1f5f9', margin: '4px 0' }} />
                 <a
                   href="#india-destinations"
                   className="navbar__link-item"
-                  onClick={() => setIsOpen(false)}
+                  onClick={() => {
+                    onNavigate('home')
+                    setIsOpen(false)
+                  }}
                 >
                   India Escapes
                 </a>
                 <a
-                  href="#friday-cta"
-                  className="navbar__link-item"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Plan Friday
-                </a>
-                <a
                   href="#intl-destinations"
                   className="navbar__link-item"
-                  onClick={() => setIsOpen(false)}
+                  onClick={() => {
+                    onNavigate('home')
+                    setIsOpen(false)
+                  }}
                 >
                   International Getaways
                 </a>
                 <a
                   href="#features"
                   className="navbar__link-item"
-                  onClick={() => setIsOpen(false)}
+                  onClick={() => {
+                    onNavigate('home')
+                    setIsOpen(false)
+                  }}
                 >
                   Travel Club
                 </a>
                 <a
                   href="#final-cta"
                   className="navbar__link-item"
-                  onClick={() => setIsOpen(false)}
+                  onClick={() => {
+                    onNavigate('home')
+                    setIsOpen(false)
+                  }}
                 >
                   Book a Trip
                 </a>

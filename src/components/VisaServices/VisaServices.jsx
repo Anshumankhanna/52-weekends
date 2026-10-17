@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { FiCheck, FiChevronDown, FiCalendar, FiClock, FiShield, FiX, FiCheckCircle } from 'react-icons/fi'
+import { FiChevronDown, FiCheckCircle } from 'react-icons/fi'
 import './VisaServices.css'
 
 const residentCountries = [

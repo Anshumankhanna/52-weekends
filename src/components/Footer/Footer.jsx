@@ -1,7 +1,7 @@
 import { FiFacebook, FiInstagram, FiLinkedin, FiTwitter } from 'react-icons/fi'
 import './Footer.css'
 
-export default function Footer() {
+export default function Footer({ onNavigate }) {
   return (
     <footer className="footer" id="footer">
       <div className="container">
@@ -11,9 +11,29 @@ export default function Footer() {
             <h4 className="footer__col-title">Pages</h4>
             <ul className="footer__links">
               <li>
-                <a href="#hero" className="footer__link">
+                <button
+                  onClick={() => onNavigate && onNavigate('home')}
+                  className="footer__link"
+                  style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}
+                >
                   Home
-                </a>
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => onNavigate && onNavigate('visa')}
+                  className="footer__link"
+                  style={{
+                    background: 'none',
+                    border: 'none',
+                    cursor: 'pointer',
+                    padding: 0,
+                    color: '#e89f22',
+                    fontWeight: 600,
+                  }}
+                >
+                  Visa Services (Doorstep)
+                </button>
               </li>
               <li>
                 <a href="#features" className="footer__link">
