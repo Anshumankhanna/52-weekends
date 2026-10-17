@@ -20,6 +20,11 @@ export default function Navbar({ currentPage, onNavigate }) {
           tabIndex={0}
           aria-label="Navigation Menu"
         >
+          <img
+            src="/brand-logo-no-bg.png"
+            alt="52 Weekends"
+            className="navbar__logo-img"
+          />
           <span className="navbar__title">
             {currentPage === 'visa' ? '52 Weekends • Visa' : '52 Weekends'}
           </span>
@@ -47,7 +52,14 @@ export default function Navbar({ currentPage, onNavigate }) {
               onClick={(e) => e.stopPropagation()}
             >
               <div className="navbar__menu-header">
-                <span className="navbar__menu-title">Explore 52 Weekends</span>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                  <img
+                    src="/brand-logo-no-bg.png"
+                    alt="52 Weekends"
+                    className="navbar__menu-logo-img"
+                  />
+                  <span className="navbar__menu-title">52 Weekends</span>
+                </div>
                 <button
                   className="navbar__close-btn"
                   onClick={() => setIsOpen(false)}

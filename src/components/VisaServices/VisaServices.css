@@ -36,18 +36,11 @@
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
 }
 
-.visa-hero__partner-icon {
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  border: 1.5px solid #061528;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-heading);
-  font-size: 11px;
-  font-weight: 800;
-  color: #061528;
+.visa-hero__partner-logo {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  display: block;
 }
 
 .visa-hero__partner-name {

@@ -30,6 +30,20 @@
   border-color: rgba(232, 159, 34, 0.45);
 }
 
+.navbar__logo-img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  display: block;
+}
+
+.navbar__menu-logo-img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  display: block;
+}
+
 .navbar__title {
   font-family: var(--font-heading);
   font-size: 15px;

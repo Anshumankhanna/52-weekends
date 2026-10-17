@@ -141,7 +141,17 @@ export default function Footer({ onNavigate }) {
           </div>
         </div>
 
-        <div className="footer__bottom">
+        <div className="footer__bottom" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '16px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+            <img
+              src="/brand-logo-no-bg.png"
+              alt="52 Weekends"
+              style={{ width: '24px', height: '24px', objectFit: 'contain' }}
+            />
+            <span style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, color: 'var(--navy)', fontSize: '15px' }}>
+              52 Weekends
+            </span>
+          </div>
           <p className="footer__copyright">
             All rights reserved for @52 Weekends India ( A unit of SGM )
           </p>

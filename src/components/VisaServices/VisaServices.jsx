@@ -113,7 +113,11 @@ export default function VisaServices({ onBackToHome }) {
             >
               <div className="visa-hero__brand">
                 <div className="visa-hero__partner-pill">
-                  <div className="visa-hero__partner-icon">52</div>
+                  <img
+                    src="/brand-logo-no-bg.png"
+                    alt="52 Weekends"
+                    className="visa-hero__partner-logo"
+                  />
                   <span className="visa-hero__partner-name">52 WEEKENDS VISA CONCIERGE</span>
                 </div>
               </div>

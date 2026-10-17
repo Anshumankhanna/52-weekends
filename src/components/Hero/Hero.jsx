@@ -14,10 +14,11 @@ export default function Hero() {
           >
             <div className="hero__brand">
               <div className="hero__logo-box">
-                <div className="hero__logo-graphic">
-                  <div className="hero__logo-ring"></div>
-                  <span className="hero__logo-num">52</span>
-                </div>
+                <img
+                  src="/brand-logo-no-bg.png"
+                  alt="52 Weekends"
+                  className="hero__logo-img"
+                />
               </div>
               <div className="hero__brand-text">
                 <span className="hero__brand-name">52 Weekends</span>
