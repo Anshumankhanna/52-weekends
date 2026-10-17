@@ -1,0 +1,137 @@
+.friday-cta {
+  background: var(--navy);
+  padding: 80px 0 110px;
+  position: relative;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.friday-cta__content {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.friday-cta__left {
+  display: flex;
+  flex-direction: column;
+}
+
+.friday-cta__subtitle {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #f2a93b;
+  margin-bottom: 16px;
+}
+
+.friday-cta__title {
+  font-family: var(--font-heading);
+  font-size: 50px;
+  font-weight: 800;
+  line-height: 1.05;
+  color: #ffffff;
+  margin-bottom: 22px;
+  letter-spacing: -0.03em;
+}
+
+.friday-cta__desc {
+  font-size: 15px;
+  line-height: 1.65;
+  color: #94a3b8;
+  margin-bottom: 32px;
+  max-width: 440px;
+}
+
+.friday-cta__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 30px;
+  background: #f2a93b;
+  color: #061528;
+  font-family: var(--font-body);
+  font-size: 14.5px;
+  font-weight: 700;
+  border-radius: 9999px;
+  box-shadow: 0 4px 18px rgba(242, 169, 59, 0.35);
+  transition: all var(--transition-fast);
+  width: fit-content;
+}
+
+.friday-cta__btn:hover {
+  background: #d9932b;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(242, 169, 59, 0.5);
+}
+
+.friday-cta__right {
+  display: flex;
+  justify-content: center;
+}
+
+.friday-cta__image-card {
+  width: 100%;
+  border-radius: 36px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  background: #0f2742;
+}
+
+.friday-cta__image {
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.friday-cta__image-card:hover .friday-cta__image {
+  transform: scale(1.04);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+  .friday-cta__title {
+    font-size: 40px;
+  }
+  .friday-cta__image {
+    height: 380px;
+  }
+}
+
+@media (max-width: 860px) {
+  .friday-cta {
+    padding: 60px 0 80px;
+  }
+  .friday-cta__content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .friday-cta__title {
+    font-size: 36px;
+  }
+  .friday-cta__desc {
+    max-width: 100%;
+  }
+  .friday-cta__image {
+    height: 340px;
+  }
+}
+
+@media (max-width: 480px) {
+  .friday-cta__title {
+    font-size: 30px;
+  }
+  .friday-cta__image {
+    height: 280px;
+  }
+  .friday-cta__image-card {
+    border-radius: 24px;
+  }
+  .friday-cta__btn {
+    width: 100%;
+  }
+}

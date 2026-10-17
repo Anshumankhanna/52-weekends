@@ -1,0 +1,106 @@
+.intl-destinations {
+  background: var(--cream);
+  padding: 95px 0 85px;
+  position: relative;
+}
+
+.intl-destinations__header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.intl-destinations__title {
+  font-family: var(--font-heading);
+  font-size: 46px;
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--navy);
+  letter-spacing: -0.03em;
+}
+
+.intl-destinations__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.intl-card {
+  background: #091c33;
+  border-radius: 26px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 10px 28px rgba(6, 21, 40, 0.12);
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.intl-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(6, 21, 40, 0.22);
+}
+
+.intl-card__image-box {
+  width: 100%;
+  aspect-ratio: 4/3.3;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #061528;
+}
+
+.intl-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.intl-card:hover .intl-card__image {
+  transform: scale(1.06);
+}
+
+.intl-card__content {
+  padding: 16px 8px 10px;
+}
+
+.intl-card__name {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 6px;
+  letter-spacing: -0.01em;
+}
+
+.intl-card__desc {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #94a3b8;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+  .intl-destinations__title {
+    font-size: 38px;
+  }
+  .intl-destinations__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .intl-destinations {
+    padding: 60px 0;
+  }
+  .intl-destinations__title {
+    font-size: 30px;
+  }
+  .intl-destinations__grid {
+    grid-template-columns: 1fr;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+}

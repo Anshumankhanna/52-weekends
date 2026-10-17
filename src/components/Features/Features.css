@@ -1,0 +1,100 @@
+.travel-club {
+  background: var(--cream);
+  padding: 85px 0 95px;
+  border-top: 1.5px solid #38bdf8;
+  position: relative;
+}
+
+.travel-club__header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.travel-club__header .section-subtitle {
+  color: #f2a93b;
+  font-size: 11px;
+  letter-spacing: 2.8px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.travel-club__header .section-title {
+  color: var(--navy);
+  font-size: 46px;
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+}
+
+.travel-club__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.club-card {
+  background: #f7f2ea;
+  border-radius: 26px;
+  padding: 30px 24px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+}
+
+.club-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.club-card__icon-wrapper {
+  margin-bottom: 22px;
+  display: flex;
+  align-items: center;
+}
+
+.club-card__icon {
+  width: 28px;
+  height: 28px;
+  color: #f2a93b;
+  stroke-width: 1.8;
+}
+
+.club-card__title {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: 10px;
+  letter-spacing: -0.015em;
+}
+
+.club-card__desc {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #556274;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+  .travel-club__header .section-title {
+    font-size: 38px;
+  }
+  .travel-club__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .travel-club {
+    padding: 60px 0;
+  }
+  .travel-club__header .section-title {
+    font-size: 28px;
+  }
+  .travel-club__grid {
+    grid-template-columns: 1fr;
+  }
+}
